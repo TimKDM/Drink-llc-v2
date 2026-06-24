@@ -1,0 +1,10 @@
+<div class="dk-marq" style="--dk-acc:{{ section.settings.accent }}"><div class="dk-marq__t">
+  {% assign items = section.settings.text | split: '|' %}
+  {% for i in (1..2) %}{% for it in items %}<span>{{ it | strip }}</span>{% endfor %}{% endfor %}
+</div></div>
+{% schema %}
+{ "name":"DRiNK marquee","settings":[
+  {"type":"text","id":"text","label":"Lines (| separated)","default":"No hype. Just hydration.|Add water. Drink.|Zero nonsense.|Just Drink."},
+  {"type":"color","id":"accent","label":"Accent","default":"#FF8C42"}
+],"presets":[{"name":"DRiNK marquee"}]}
+{% endschema %}

@@ -1,0 +1,11 @@
+<section class="dk-sec" style="--dk-acc:{{ section.settings.accent }}"><div class="dk-wrap dk-statement">
+  <p>{{ section.settings.text }}</p>
+  {% if section.settings.label != blank %}<span class="dk-label">{{ section.settings.label }}</span>{% endif %}
+</div></section>
+{% schema %}
+{ "name":"DRiNK statement","settings":[
+  {"type":"textarea","id":"text","label":"Statement","default":"This is not a supplement. It's a drink."},
+  {"type":"text","id":"label","label":"Label","default":"Premium hydration · made simple"},
+  {"type":"color","id":"accent","label":"Accent","default":"#FF9EBA"}
+],"presets":[{"name":"DRiNK statement"}]}
+{% endschema %}

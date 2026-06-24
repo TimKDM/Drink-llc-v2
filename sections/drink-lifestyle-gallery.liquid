@@ -1,0 +1,19 @@
+<section class="dk-sec" style="--dk-acc:{{ section.settings.accent }}"><div class="dk-wrap">
+  {% if section.settings.heading != blank %}<div class="dk-head"><h2 class="dk-bebas">{{ section.settings.heading }}</h2></div>{% endif %}
+  <div class="dk-gal">
+    {% for block in section.blocks %}
+      <div class="dk-gal__i" {{ block.shopify_attributes }}>
+        {% if block.settings.image %}<img src="{{ block.settings.image | image_url: width: 900 }}" alt="{{ block.settings.caption | escape }}" loading="lazy">{% endif %}
+        {% if block.settings.caption != blank %}<span class="dk-gal__cap dk-label" style="color:var(--dk-off)">{{ block.settings.caption }}</span>{% endif %}
+      </div>
+    {% endfor %}
+  </div>
+</div></section>
+{% schema %}
+{ "name":"DRiNK lifestyle gallery",
+  "settings":[{"type":"text","id":"heading","label":"Heading","default":"In the wild"},{"type":"color","id":"accent","label":"Accent","default":"#7CB518"}],
+  "blocks":[{"type":"image","name":"Image","settings":[{"type":"image_picker","id":"image","label":"Image"},{"type":"text","id":"caption","label":"Caption"}]}],
+  "max_blocks":6,
+  "presets":[{"name":"DRiNK lifestyle gallery","blocks":[{"type":"image"},{"type":"image"},{"type":"image"},{"type":"image"}]}]
+}
+{% endschema %}

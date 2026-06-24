@@ -1,0 +1,18 @@
+<section class="dk-hero" style="--dk-acc:{{ section.settings.accent }}">
+  <span class="dk-hero__glow"></span>
+  {% if section.settings.kicker != blank %}<span class="dk-label">{{ section.settings.kicker }}</span>{% endif %}
+  <h1 class="dk-bebas dk-hero__t">{{ section.settings.title }}</h1>
+  {% render 'drink-mark', dot: section.settings.accent %}
+  {% if section.settings.cta != blank %}<a class="dk-btn" href="{{ section.settings.link }}">{{ section.settings.cta }}</a>{% endif %}
+  {% if section.settings.sub != blank %}<div class="dk-hero__sub">{{ section.settings.sub }}</div>{% endif %}
+</section>
+{% schema %}
+{ "name":"DRiNK hero","settings":[
+  {"type":"text","id":"kicker","label":"Kicker","default":"Hydration & recovery"},
+  {"type":"text","id":"title","label":"Headline","default":"Just Drink."},
+  {"type":"text","id":"sub","label":"Subline","default":"Electrolytes · B-vitamins · Caffeine-free"},
+  {"type":"text","id":"cta","label":"CTA","default":"Pick your flavor."},
+  {"type":"url","id":"link","label":"Link"},
+  {"type":"color","id":"accent","label":"Accent","default":"#FF8C42"}
+],"presets":[{"name":"DRiNK hero"}]}
+{% endschema %}

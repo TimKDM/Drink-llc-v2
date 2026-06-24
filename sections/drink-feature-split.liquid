@@ -1,0 +1,21 @@
+<section class="dk-sec" style="--dk-acc:{{ section.settings.accent }}"><div class="dk-wrap dk-split {{ section.settings.media_side }}">
+  <div class="dk-split__m">{% if section.settings.image %}<img src="{{ section.settings.image | image_url: width: 1200 }}" alt="{{ section.settings.title | escape }}" loading="lazy">{% endif %}</div>
+  <div class="dk-split__x">
+    {% if section.settings.kicker != blank %}<span class="dk-label">{{ section.settings.kicker }}</span>{% endif %}
+    <h2 class="dk-bebas">{{ section.settings.title }}</h2>
+    <p class="dk-muted">{{ section.settings.body }}</p>
+    {% if section.settings.cta != blank %}<a class="dk-btn dk-btn--ghost" href="{{ section.settings.link }}">{{ section.settings.cta }}</a>{% endif %}
+  </div>
+</div></section>
+{% schema %}
+{ "name":"DRiNK feature split","settings":[
+  {"type":"image_picker","id":"image","label":"Image"},
+  {"type":"select","id":"media_side","label":"Image side","options":[{"value":"","label":"Left"},{"value":"right","label":"Right"}],"default":"right"},
+  {"type":"text","id":"kicker","label":"Kicker","default":"The whole point"},
+  {"type":"text","id":"title","label":"Title","default":"Hydration that keeps up."},
+  {"type":"textarea","id":"body","label":"Body","default":"Electrolytes and B-vitamins in a clean flavor. No sugar, no caffeine, no filler. You drink it. That's the whole ritual."},
+  {"type":"text","id":"cta","label":"CTA","default":"Shop the lineup"},
+  {"type":"url","id":"link","label":"Link"},
+  {"type":"color","id":"accent","label":"Accent","default":"#C77DFF"}
+],"presets":[{"name":"DRiNK feature split"}]}
+{% endschema %}

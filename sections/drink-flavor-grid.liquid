@@ -1,0 +1,21 @@
+<section class="dk-sec"><div class="dk-wrap">
+  <div class="dk-head"><h2 class="dk-bebas">{{ section.settings.heading }}</h2>
+    {% if section.settings.link_text != blank %}<a class="dk-label" href="{{ section.settings.link_url }}">{{ section.settings.link_text }}</a>{% endif %}</div>
+  <div class="dk-grid">
+    {% assign coll = collections[section.settings.collection] %}
+    {% if coll != blank and coll.products_count > 0 %}
+      {% for product in coll.products limit: section.settings.count %}{% render 'drink-card', product: product %}{% endfor %}
+    {% else %}
+      {% for i in (1..4) %}<div class="dk-card" style="--ca:#FF8C42"><div class="dk-card__img">{% render 'drink-mark', dot:'#FF8C42' %}</div><div class="dk-card__body"><span class="dk-card__flavor">Flavor</span><span class="dk-card__price">$29</span></div></div>{% endfor %}
+    {% endif %}
+  </div>
+</div></section>
+{% schema %}
+{ "name":"DRiNK flavor grid","settings":[
+  {"type":"text","id":"heading","label":"Heading","default":"The lineup"},
+  {"type":"collection","id":"collection","label":"Collection"},
+  {"type":"range","id":"count","label":"Max","min":3,"max":12,"step":1,"default":8},
+  {"type":"text","id":"link_text","label":"Link text","default":"Shop all"},
+  {"type":"url","id":"link_url","label":"Link url"}
+],"presets":[{"name":"DRiNK flavor grid"}]}
+{% endschema %}

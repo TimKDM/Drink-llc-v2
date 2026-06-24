@@ -1,0 +1,19 @@
+<section class="dk-lstyle" style="--dk-acc:{{ section.settings.accent }}">
+  {% if section.settings.image %}<img class="dk-lstyle__img" src="{{ section.settings.image | image_url: width: 2400 }}" alt="{{ section.settings.title | escape }}" loading="lazy">{% else %}<div class="dk-lstyle__img dk-lstyle__ph"></div>{% endif %}
+  <div class="dk-lstyle__ov"></div>
+  <div class="dk-wrap dk-lstyle__c">
+    {% if section.settings.kicker != blank %}<span class="dk-label">{{ section.settings.kicker }}</span>{% endif %}
+    <h2 class="dk-bebas dk-lstyle__t">{{ section.settings.title }}</h2>
+    {% if section.settings.cta != blank %}<a class="dk-btn" href="{{ section.settings.link }}">{{ section.settings.cta }}</a>{% endif %}
+  </div>
+</section>
+{% schema %}
+{ "name":"DRiNK lifestyle banner","settings":[
+  {"type":"image_picker","id":"image","label":"Image"},
+  {"type":"text","id":"kicker","label":"Kicker","default":"Any pace"},
+  {"type":"text","id":"title","label":"Title","default":"Desk. Gym. Street. Same drink."},
+  {"type":"text","id":"cta","label":"CTA","default":"Pick your flavor."},
+  {"type":"url","id":"link","label":"Link"},
+  {"type":"color","id":"accent","label":"Accent","default":"#FF8C42"}
+],"presets":[{"name":"DRiNK lifestyle banner"}]}
+{% endschema %}

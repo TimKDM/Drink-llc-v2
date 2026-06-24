@@ -1,0 +1,77 @@
+/* ===== DRiNK skin over Dawn ===== */
+:root{
+  --dk-void:#0D0D0D; --dk-carbon:#2A2A2A; --dk-ash:#888880; --dk-off:#F5F5F0;
+  --dk-acc:#FF8C42; --dk-pad:clamp(20px,5vw,72px); --dk-maxw:1320px;
+}
+body{ background:var(--dk-void); color:var(--dk-off);
+  font-family:"DM Sans","Helvetica Neue",sans-serif; font-weight:300; letter-spacing:.01em; }
+h1,h2,h3,h4,.h0,.h1,.h2,.h3{ font-family:"Bebas Neue",sans-serif!important; font-weight:400!important;
+  text-transform:uppercase; letter-spacing:.06em; line-height:.95; }
+/* buttons -> DRiNK */
+.button,.shopify-payment-button__button--unbranded{ border-radius:4px!important; text-transform:uppercase;
+  letter-spacing:.16em; font-family:"DM Sans",sans-serif; font-weight:500; font-size:12px; }
+.button--primary,.shopify-payment-button__button--unbranded{ background:var(--dk-acc)!important; color:#0D0D0D!important; border:none!important; }
+/* header / footer dark */
+.header{ background:rgba(13,13,13,.78)!important; backdrop-filter:blur(10px); }
+.header__heading-link .h2,.header__heading-link{ color:var(--dk-off); }
+.list-menu__item,.header__menu-item{ text-transform:uppercase; letter-spacing:.18em; font-size:12px; }
+.footer{ background:var(--dk-void); border-top:.5px solid var(--dk-carbon); }
+.drink-mark{ height:1em; width:auto; fill:currentColor; color:var(--dk-off); }
+
+/* ===== DRiNK sections (dk- namespace) ===== */
+.dk-wrap{ max-width:var(--dk-maxw); margin:0 auto; padding-inline:var(--dk-pad); }
+.dk-bebas{ font-family:"Bebas Neue",sans-serif; text-transform:uppercase; letter-spacing:.08em; line-height:.92; }
+.dk-label{ font-family:"DM Sans",sans-serif; font-weight:500; text-transform:uppercase; letter-spacing:.28em; font-size:10px; color:var(--dk-ash); }
+.dk-muted{ color:var(--dk-ash); }
+.dk-btn{ display:inline-block; font-weight:500; text-transform:uppercase; letter-spacing:.18em; font-size:12px; padding:14px 26px; border-radius:4px; background:var(--dk-acc); color:#0D0D0D; border:.5px solid var(--dk-acc); }
+.dk-btn--ghost{ background:transparent; color:var(--dk-off); border-color:rgba(245,245,240,.35); }
+.dk-sec{ padding-block:clamp(56px,9vw,120px); position:relative; }
+.dk-head{ display:flex; align-items:baseline; justify-content:space-between; gap:16px; flex-wrap:wrap; margin-bottom:34px; }
+.dk-head h2{ font-size:clamp(30px,5vw,64px); }
+/* hero */
+.dk-hero{ position:relative; min-height:84vh; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; overflow:hidden; }
+.dk-hero__glow{ position:absolute; left:50%; bottom:-30vh; transform:translateX(-50%); width:120vw; height:60vh; pointer-events:none;
+  background:radial-gradient(ellipse at center bottom, color-mix(in srgb,var(--dk-acc) 16%,transparent), transparent 60%); }
+.dk-hero__t{ font-size:clamp(56px,15vw,200px); margin:.04em 0; position:relative; }
+.dk-hero .drink-mark{ height:clamp(40px,9vw,118px); margin:16px auto 24px; position:relative; }
+.dk-hero__sub{ margin-top:20px; text-transform:uppercase; letter-spacing:.3em; font-size:11px; color:var(--dk-ash); }
+/* marquee */
+.dk-marq{ border-block:.5px solid var(--dk-carbon); overflow:hidden; white-space:nowrap; padding:14px 0; }
+.dk-marq__t{ display:inline-block; animation:dkmarq 28s linear infinite; }
+.dk-marq span{ font-family:"Bebas Neue",sans-serif; text-transform:uppercase; letter-spacing:.14em; font-size:22px; padding:0 26px; }
+.dk-marq span::after{ content:"·"; color:var(--dk-acc); margin-left:52px; }
+@keyframes dkmarq{ to{ transform:translateX(-50%);} }
+/* flavor grid */
+.dk-grid{ display:grid; grid-template-columns:repeat(auto-fill,minmax(230px,1fr)); gap:16px; }
+.dk-card{ position:relative; display:block; border:.5px solid var(--dk-carbon); border-radius:8px; overflow:hidden; background:var(--dk-void); transition:border-color .2s; }
+.dk-card:hover{ border-color:color-mix(in srgb,var(--ca) 60%,var(--dk-carbon)); }
+.dk-card__img{ aspect-ratio:1; background:#F4F3F1; display:flex; align-items:center; justify-content:center; }
+.dk-card__img img{ width:100%; height:100%; object-fit:cover; }
+.dk-card__img .drink-mark{ height:38px; color:#0D0D0D; }
+.dk-card__body{ text-align:center; padding:16px 14px 18px; }
+.dk-card__flavor{ font-family:"Bebas Neue",sans-serif; text-transform:uppercase; letter-spacing:.2em; font-size:16px; color:var(--ca); display:block; }
+.dk-card__price{ color:var(--dk-ash); font-size:13px; margin-top:4px; display:block; }
+.dk-card__cta{ position:absolute; left:0; right:0; bottom:0; padding:11px; font-size:11px; letter-spacing:.2em; text-transform:uppercase; color:#0D0D0D; background:var(--ca); text-align:center; transform:translateY(101%); transition:transform .2s; }
+.dk-card:hover .dk-card__cta{ transform:translateY(0); }
+/* statement */
+.dk-statement{ text-align:center; }
+.dk-statement p{ font-family:"Bebas Neue",sans-serif; text-transform:uppercase; letter-spacing:.04em; line-height:1.04; font-size:clamp(30px,6vw,84px); max-width:18ch; margin:0 auto; }
+.dk-statement .dk-label{ margin-top:24px; display:block; }
+/* lifestyle */
+.dk-lstyle{ position:relative; min-height:62vh; display:flex; align-items:flex-end; overflow:hidden; }
+.dk-lstyle__img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+.dk-lstyle__ph{ background:#1b1b1a; }
+.dk-lstyle__ov{ position:absolute; inset:0; background:rgba(13,13,13,.42); }
+.dk-lstyle__c{ position:relative; z-index:2; padding-block:clamp(34px,6vw,80px); }
+.dk-lstyle__t{ font-size:clamp(40px,8vw,116px); max-width:16ch; margin:10px 0 22px; }
+.dk-split{ display:grid; grid-template-columns:1fr 1fr; gap:clamp(28px,5vw,72px); align-items:center; }
+.dk-split.right .dk-split__m{ order:2; }
+.dk-split__m{ aspect-ratio:4/5; border-radius:8px; overflow:hidden; background:#1b1b1a; }
+.dk-split__m img{ width:100%; height:100%; object-fit:cover; }
+.dk-split__x h2{ font-size:clamp(32px,5vw,68px); margin:.1em 0 .25em; }
+.dk-split__x p{ max-width:42ch; margin-bottom:24px; }
+.dk-gal{ display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:14px; }
+.dk-gal__i{ position:relative; aspect-ratio:4/5; border-radius:8px; overflow:hidden; background:#1b1b1a; }
+.dk-gal__i img{ width:100%; height:100%; object-fit:cover; }
+.dk-gal__cap{ position:absolute; left:0; bottom:0; padding:12px 14px; z-index:2; }
+@media(max-width:760px){ .dk-split{ grid-template-columns:1fr;} .dk-split.right .dk-split__m{ order:0;} }
