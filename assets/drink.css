@@ -81,3 +81,13 @@ h1,h2,h3,h4,.h0,.h1,.h2,.h3{ font-family:"Bebas Neue",sans-serif!important; font
 .dk-facts summary{ list-style:none; cursor:pointer; padding:16px 0; display:flex; justify-content:space-between; text-transform:uppercase; letter-spacing:.18em; }
 .dk-facts summary::-webkit-details-marker{ display:none; }
 .dk-facts__b{ padding-bottom:18px; color:var(--dk-ash); font-size:14px; line-height:1.8; }
+
+/* PDP details panel */
+.dk-badges{ display:flex; flex-wrap:wrap; gap:8px; margin-bottom:22px; }
+.dk-badge{ font-family:"DM Sans",sans-serif; font-weight:500; text-transform:uppercase; letter-spacing:.18em; font-size:10px; color:var(--dk-off); border:.5px solid var(--dk-carbon); border-radius:4px; padding:7px 12px; }
+.dk-spec{ display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:14px; margin:0 0 14px; border-block:.5px solid var(--dk-carbon); padding:18px 0; }
+.dk-spec dt{ font-size:10px; letter-spacing:.22em; text-transform:uppercase; color:var(--dk-ash); margin-bottom:4px; }
+.dk-spec dd{ font-size:14px; color:var(--dk-off); }
+.dk-facts summary span.dk-pm{ color:var(--dk-ash); }
+.dk-facts[open] summary .dk-pm{ transform:rotate(45deg); display:inline-block; }
+.dk-fda{ margin-top:22px; font-size:11px; line-height:1.6; color:var(--dk-ash); }

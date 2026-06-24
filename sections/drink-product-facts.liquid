@@ -1,19 +1,46 @@
-{%- assign facts = product.metafields.custom.supplement_facts -%}
-{%- assign ingr = product.metafields.custom.ingredients -%}
-{%- if facts != blank or ingr != blank -%}
-<section class="dk-sec"><div class="dk-wrap" style="max-width:760px">
-  {%- if facts != blank -%}
-  <details class="dk-facts" open>
-    <summary><span class="dk-bebas" style="font-size:22px">Supplement Facts</span></summary>
-    <div class="dk-facts__b">{{ facts | newline_to_br }}</div>
-  </details>
+{%- assign mf = product.metafields.custom -%}
+<section class="dk-sec"><div class="dk-wrap" style="max-width:780px">
+
+  {%- if mf.badges != blank -%}
+  <div class="dk-badges">{% for b in mf.badges.value %}<span class="dk-badge">{{ b }}</span>{% endfor %}</div>
   {%- endif -%}
-  {%- if ingr != blank -%}
-  <details class="dk-facts">
-    <summary><span class="dk-label">Ingredients</span></summary>
-    <div class="dk-facts__b">{{ ingr }}</div>
-  </details>
+
+  {%- if mf.flavor != blank or mf.net_weight != blank or mf.origin != blank -%}
+  <dl class="dk-spec">
+    {%- if mf.flavor != blank -%}<div><dt>Flavor</dt><dd>{{ mf.flavor }}</dd></div>{%- endif -%}
+    {%- if mf.net_weight != blank -%}<div><dt>Net weight</dt><dd>{{ mf.net_weight }}</dd></div>{%- endif -%}
+    {%- if mf.gross_weight != blank -%}<div><dt>Gross weight</dt><dd>{{ mf.gross_weight }}</dd></div>{%- endif -%}
+    {%- if mf.origin != blank -%}<div><dt>Made in</dt><dd>{{ mf.origin }}</dd></div>{%- endif -%}
+  </dl>
+  {%- endif -%}
+
+  {%- if mf.supplement_facts != blank -%}
+  <details class="dk-facts" open><summary><span class="dk-bebas" style="font-size:22px">Supplement Facts</span><span class="dk-pm">+</span></summary>
+    <div class="dk-facts__b">{{ mf.supplement_facts | newline_to_br }}</div></details>
+  {%- endif -%}
+  {%- if mf.ingredients != blank -%}
+  <details class="dk-facts"><summary><span class="dk-label">Ingredients</span><span class="dk-pm">+</span></summary>
+    <div class="dk-facts__b">{{ mf.ingredients }}</div></details>
+  {%- endif -%}
+  {%- if mf.directions != blank -%}
+  <details class="dk-facts"><summary><span class="dk-label">Directions</span><span class="dk-pm">+</span></summary>
+    <div class="dk-facts__b">{{ mf.directions | newline_to_br }}</div></details>
+  {%- endif -%}
+  {%- if mf.warnings != blank -%}
+  <details class="dk-facts"><summary><span class="dk-label">Warnings</span><span class="dk-pm">+</span></summary>
+    <div class="dk-facts__b">{{ mf.warnings | newline_to_br }}</div></details>
+  {%- endif -%}
+  {%- if mf.allergens != blank -%}
+  <details class="dk-facts"><summary><span class="dk-label">Allergens</span><span class="dk-pm">+</span></summary>
+    <div class="dk-facts__b">{{ mf.allergens | newline_to_br }}</div></details>
+  {%- endif -%}
+  {%- if mf.storage != blank -%}
+  <details class="dk-facts"><summary><span class="dk-label">Storage</span><span class="dk-pm">+</span></summary>
+    <div class="dk-facts__b">{{ mf.storage | newline_to_br }}</div></details>
+  {%- endif -%}
+
+  {%- if mf.fda_disclaimer != blank -%}
+  <p class="dk-fda">*{{ mf.fda_disclaimer }}</p>
   {%- endif -%}
 </div></section>
-{%- endif -%}
-{% schema %}{ "name":"DRiNK supplement facts","settings":[] }{% endschema %}
+{% schema %}{ "name":"DRiNK product details","settings":[] }{% endschema %}
