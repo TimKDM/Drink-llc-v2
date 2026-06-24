@@ -75,3 +75,9 @@ h1,h2,h3,h4,.h0,.h1,.h2,.h3{ font-family:"Bebas Neue",sans-serif!important; font
 .dk-gal__i img{ width:100%; height:100%; object-fit:cover; }
 .dk-gal__cap{ position:absolute; left:0; bottom:0; padding:12px 14px; z-index:2; }
 @media(max-width:760px){ .dk-split{ grid-template-columns:1fr;} .dk-split.right .dk-split__m{ order:0;} }
+
+/* PDP supplement facts */
+.dk-facts{ border-top:.5px solid var(--dk-carbon); }
+.dk-facts summary{ list-style:none; cursor:pointer; padding:16px 0; display:flex; justify-content:space-between; text-transform:uppercase; letter-spacing:.18em; }
+.dk-facts summary::-webkit-details-marker{ display:none; }
+.dk-facts__b{ padding-bottom:18px; color:var(--dk-ash); font-size:14px; line-height:1.8; }

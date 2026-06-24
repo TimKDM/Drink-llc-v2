@@ -1,12 +1,105 @@
 {
   "sections": {
-    "hero": { "type": "drink-hero", "settings": { "kicker": "Hydration & recovery", "title": "Just Drink.", "sub": "Electrolytes · B-vitamins · Caffeine-free", "cta": "Pick your flavor.", "accent": "#FF8C42" } },
-    "marquee": { "type": "drink-marquee", "settings": { "accent": "#FF8C42" } },
-    "grid": { "type": "drink-flavor-grid", "settings": { "heading": "The lineup", "count": 8, "link_text": "Shop all" } },
-    "banner": { "type": "drink-lifestyle-banner", "settings": { "kicker": "Any pace", "title": "Desk. Gym. Street. Same drink.", "cta": "Pick your flavor.", "accent": "#FF8C42" } },
-    "split": { "type": "drink-feature-split", "settings": { "kicker": "The whole point", "title": "Hydration that keeps up.", "body": "Electrolytes and B-vitamins in a clean flavor. No sugar, no caffeine, no filler. You drink it. That's the whole ritual.", "cta": "Shop the lineup", "media_side": "right", "accent": "#C77DFF" } },
-    "gallery": { "type": "drink-lifestyle-gallery", "settings": { "heading": "In the wild", "accent": "#7CB518" }, "blocks": { "a": { "type": "image", "settings": { "caption": "Post-run" } }, "b": { "type": "image", "settings": { "caption": "Desk hours" } }, "c": { "type": "image", "settings": { "caption": "Court side" } }, "d": { "type": "image", "settings": { "caption": "Anywhere" } } }, "block_order": ["a","b","c","d"] },
-    "statement": { "type": "drink-statement", "settings": { "text": "This is not a supplement. It's a drink.", "label": "Premium hydration · made simple", "accent": "#FF9EBA" } }
+    "hero": {
+      "type": "drink-hero",
+      "settings": {
+        "kicker": "Hydration & recovery",
+        "title": "Just Drink.",
+        "sub": "Electrolytes \u00b7 B-vitamins \u00b7 Caffeine-free",
+        "cta": "Pick your flavor.",
+        "accent": "#FF8C42"
+      }
+    },
+    "marquee": {
+      "type": "drink-marquee",
+      "settings": {
+        "accent": "#FF8C42"
+      }
+    },
+    "grid": {
+      "type": "drink-flavor-grid",
+      "settings": {
+        "heading": "The lineup",
+        "count": 8,
+        "link_text": "Shop all",
+        "collection": "hydration-powders"
+      }
+    },
+    "banner": {
+      "type": "drink-lifestyle-banner",
+      "settings": {
+        "kicker": "Any pace",
+        "title": "Desk. Gym. Street. Same drink.",
+        "cta": "Pick your flavor.",
+        "accent": "#FF8C42"
+      }
+    },
+    "split": {
+      "type": "drink-feature-split",
+      "settings": {
+        "kicker": "The whole point",
+        "title": "Hydration that keeps up.",
+        "body": "Electrolytes and B-vitamins in a clean flavor. No sugar, no caffeine, no filler. You drink it. That's the whole ritual.",
+        "cta": "Shop the lineup",
+        "media_side": "right",
+        "accent": "#C77DFF"
+      }
+    },
+    "gallery": {
+      "type": "drink-lifestyle-gallery",
+      "settings": {
+        "heading": "In the wild",
+        "accent": "#7CB518"
+      },
+      "blocks": {
+        "a": {
+          "type": "image",
+          "settings": {
+            "caption": "Post-run"
+          }
+        },
+        "b": {
+          "type": "image",
+          "settings": {
+            "caption": "Desk hours"
+          }
+        },
+        "c": {
+          "type": "image",
+          "settings": {
+            "caption": "Court side"
+          }
+        },
+        "d": {
+          "type": "image",
+          "settings": {
+            "caption": "Anywhere"
+          }
+        }
+      },
+      "block_order": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ]
+    },
+    "statement": {
+      "type": "drink-statement",
+      "settings": {
+        "text": "This is not a supplement. It's a drink.",
+        "label": "Premium hydration \u00b7 made simple",
+        "accent": "#FF9EBA"
+      }
+    }
   },
-  "order": ["hero","marquee","grid","banner","split","gallery","statement"]
+  "order": [
+    "hero",
+    "marquee",
+    "grid",
+    "banner",
+    "split",
+    "gallery",
+    "statement"
+  ]
 }

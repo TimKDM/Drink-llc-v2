@@ -1,0 +1,19 @@
+{%- assign facts = product.metafields.custom.supplement_facts -%}
+{%- assign ingr = product.metafields.custom.ingredients -%}
+{%- if facts != blank or ingr != blank -%}
+<section class="dk-sec"><div class="dk-wrap" style="max-width:760px">
+  {%- if facts != blank -%}
+  <details class="dk-facts" open>
+    <summary><span class="dk-bebas" style="font-size:22px">Supplement Facts</span></summary>
+    <div class="dk-facts__b">{{ facts | newline_to_br }}</div>
+  </details>
+  {%- endif -%}
+  {%- if ingr != blank -%}
+  <details class="dk-facts">
+    <summary><span class="dk-label">Ingredients</span></summary>
+    <div class="dk-facts__b">{{ ingr }}</div>
+  </details>
+  {%- endif -%}
+</div></section>
+{%- endif -%}
+{% schema %}{ "name":"DRiNK supplement facts","settings":[] }{% endschema %}

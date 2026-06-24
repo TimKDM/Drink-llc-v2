@@ -93,11 +93,16 @@
         "padding_top": 36,
         "padding_bottom": 28
       }
+    },
+    "drink_facts": {
+      "type": "drink-product-facts",
+      "settings": {}
     }
   },
   "order": [
     "main",
     "disclosures",
-    "related-products"
+    "related-products",
+    "drink_facts"
   ]
 }
