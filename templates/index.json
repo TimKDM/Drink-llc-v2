@@ -26,45 +26,6 @@
         "accent": "#C77DFF"
       }
     },
-    "gallery": {
-      "type": "drink-lifestyle-gallery",
-      "settings": {
-        "heading": "After hours",
-        "accent": "#7CB518"
-      },
-      "blocks": {
-        "a": {
-          "type": "image",
-          "settings": {
-            "caption": "Post-run"
-          }
-        },
-        "b": {
-          "type": "image",
-          "settings": {
-            "caption": "Desk hours"
-          }
-        },
-        "c": {
-          "type": "image",
-          "settings": {
-            "caption": "After dark"
-          }
-        },
-        "d": {
-          "type": "image",
-          "settings": {
-            "caption": "Streets"
-          }
-        }
-      },
-      "block_order": [
-        "a",
-        "b",
-        "c",
-        "d"
-      ]
-    },
     "statement": {
       "type": "drink-statement",
       "settings": {
@@ -127,7 +88,6 @@
     "marquee",
     "grid",
     "split",
-    "statement",
-    "gallery"
+    "statement"
   ]
 }
