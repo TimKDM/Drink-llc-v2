@@ -1,15 +1,5 @@
 {
   "sections": {
-    "hero": {
-      "type": "drink-hero",
-      "settings": {
-        "kicker": "Hydration & recovery",
-        "title": "Just Drink.",
-        "sub": "Electrolytes \u00b7 B-vitamins \u00b7 Caffeine-free",
-        "cta": "Pick your flavor.",
-        "accent": "#FF8C42"
-      }
-    },
     "marquee": {
       "type": "drink-marquee",
       "settings": {
@@ -23,16 +13,6 @@
         "count": 8,
         "link_text": "Shop all",
         "collection": "hydration-powders"
-      }
-    },
-    "banner": {
-      "type": "drink-lifestyle-banner",
-      "settings": {
-        "kicker": "Any pace",
-        "title": "One drink. Every you.",
-        "cta": "Pick your flavor.",
-        "accent": "#FF8C42",
-        "keep_color": true
       }
     },
     "split": {
@@ -94,26 +74,60 @@
         "tone": "light"
       }
     },
-    "banner2": {
-      "type": "drink-lifestyle-banner",
+    "heroslider": {
+      "type": "drink-hero-slider",
+      "blocks": {
+        "s1": {
+          "type": "slide",
+          "settings": {
+            "asset_name": "drink-hero-1.jpg",
+            "keep_color": true,
+            "kicker": "Any pace",
+            "title": "One drink. Every you.",
+            "cta": "Pick your flavor.",
+            "link": "/collections/all"
+          }
+        },
+        "s2": {
+          "type": "slide",
+          "settings": {
+            "asset_name": "drink-hero-2.jpg",
+            "keep_color": false,
+            "kicker": "After dark",
+            "title": "Hydrate on your time.",
+            "cta": "Shop the lineup",
+            "link": "/collections/all"
+          }
+        },
+        "s3": {
+          "type": "slide",
+          "settings": {
+            "asset_name": "drink-hero-3.jpg",
+            "keep_color": false,
+            "kicker": "No hype",
+            "title": "Just hydration.",
+            "cta": "Shop the lineup",
+            "link": "/collections/all"
+          }
+        }
+      },
+      "block_order": [
+        "s1",
+        "s2",
+        "s3"
+      ],
       "settings": {
-        "asset_name": "drink-banner-2.jpg",
-        "kicker": "After dark",
-        "title": "Hydrate on your time.",
-        "cta": "Shop the lineup",
-        "accent": "#FF8C42",
-        "keep_color": false
+        "interval": 6,
+        "accent": "#FF8C42"
       }
     }
   },
   "order": [
-    "hero",
+    "heroslider",
     "marquee",
     "grid",
-    "banner",
     "split",
     "gallery",
-    "banner2",
     "statement"
   ]
 }
