@@ -3,7 +3,7 @@
   <div class="dk-gal">
     {% for block in section.blocks %}
       <div class="dk-gal__i" {{ block.shopify_attributes }}>
-        {% if block.settings.image %}<img src="{{ block.settings.image | image_url: width: 900 }}" alt="{{ block.settings.caption | escape }}" loading="lazy">{% endif %}
+        {% if block.settings.image %}<img src="{{ block.settings.image | image_url: width: 900 }}" alt="{{ block.settings.caption | escape }}" loading="lazy">{% else %}{% assign dimg = 'drink-gallery-' | append: forloop.index | append: '.jpg' %}<img src="{{ dimg | asset_url }}" alt="{{ block.settings.caption | escape }}" loading="lazy">{% endif %}
         {% if block.settings.caption != blank %}<span class="dk-gal__cap dk-label" style="color:var(--dk-off)">{{ block.settings.caption }}</span>{% endif %}
       </div>
     {% endfor %}

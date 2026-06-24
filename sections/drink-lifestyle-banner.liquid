@@ -1,5 +1,5 @@
 <section class="dk-lstyle" style="--dk-acc:{{ section.settings.accent }}">
-  {% if section.settings.image %}<img class="dk-lstyle__img" src="{{ section.settings.image | image_url: width: 2400 }}" alt="{{ section.settings.title | escape }}" loading="lazy">{% else %}<div class="dk-lstyle__img dk-lstyle__ph"></div>{% endif %}
+  {% if section.settings.image %}<img class="dk-lstyle__img" src="{{ section.settings.image | image_url: width: 2400 }}" alt="{{ section.settings.title | escape }}" loading="eager">{% else %}<img class="dk-lstyle__img" src="{{ 'drink-banner.jpg' | asset_url }}" alt="{{ section.settings.title | escape }}" loading="eager">{% endif %}
   <div class="dk-lstyle__ov"></div>
   <div class="dk-wrap dk-lstyle__c">
     {% if section.settings.kicker != blank %}<span class="dk-label">{{ section.settings.kicker }}</span>{% endif %}

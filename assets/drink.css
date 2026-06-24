@@ -106,3 +106,7 @@ h1,h2,h3,h4,.h0,.h1,.h2,.h3{ font-family:"Bebas Neue",sans-serif!important; font
 .dk-light .dk-facts__b{ color:#3a3a37; }
 .dk-light .dk-facts summary span.dk-pm{ color:#6b6b66; }
 .dk-light .dk-fda{ color:#6b6b66; }
+
+
+/* lifestyle grade — unify the stock set on the dark theme */
+.dk-lstyle__img, .dk-split__m img, .dk-gal__i img{ filter:grayscale(.18) contrast(1.06) brightness(.96) saturate(.9); }
