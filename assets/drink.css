@@ -131,5 +131,11 @@ h1,h2,h3,h4,.h0,.h1,.h2,.h3{ font-family:"Bebas Neue",sans-serif!important; font
 .dk-hs__dot.is-on{ background:var(--dk-acc,#FF8C42); }
 
 /* feature-split photo collage */
-.dk-split__m.dk-collage{ aspect-ratio:1/1; background:transparent; border-radius:0; overflow:visible; display:grid; grid-template-columns:1fr 1fr; grid-template-rows:1fr 1fr; gap:8px; }
+.dk-split__m.dk-collage{ aspect-ratio:1/1; background:transparent; border-radius:0; overflow:visible; display:grid; grid-template-columns:repeat(3,1fr); grid-template-rows:repeat(3,1fr); gap:8px; }
 .dk-collage img{ width:100%; height:100%; object-fit:cover; border-radius:8px; }
+.dk-collage img:nth-child(1){ grid-column:1 / span 2; grid-row:1 / span 2; }
+.dk-collage img:nth-child(2){ grid-column:3; grid-row:1; }
+.dk-collage img:nth-child(3){ grid-column:3; grid-row:2; }
+.dk-collage img:nth-child(4){ grid-column:1; grid-row:3; }
+.dk-collage img:nth-child(5){ grid-column:2; grid-row:3; }
+.dk-collage img:nth-child(6){ grid-column:3; grid-row:3; }
