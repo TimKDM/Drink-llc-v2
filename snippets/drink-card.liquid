@@ -14,8 +14,12 @@
   elsif h contains 'creatine'
     assign acc = '#3BA7FF'
   endif
+  assign cardcls = 'dk-card'
+  if h contains 'creatine'
+    assign cardcls = 'dk-card dk-card--creatine'
+  endif
 -%}
-<a class="dk-card" href="{{ product.url }}" style="--ca:{{ acc }}">
+<a class="{{ cardcls }}" href="{{ product.url }}" style="--ca:{{ acc }}">
   <span class="dk-card__img">
     {% if product.featured_image %}<img src="{{ product.featured_image | image_url: width: 720 }}" alt="{{ product.title | escape }}" loading="lazy" width="720" height="720">{% else %}{% render 'drink-mark', dot: acc %}{% endif %}
   </span>

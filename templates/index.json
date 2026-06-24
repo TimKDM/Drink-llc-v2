@@ -10,7 +10,7 @@
       "type": "drink-flavor-grid",
       "settings": {
         "heading": "The lineup",
-        "count": 8,
+        "count": 5,
         "link_text": "Shop all",
         "collection": "hydration-powders"
       }
