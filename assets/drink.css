@@ -91,3 +91,18 @@ h1,h2,h3,h4,.h0,.h1,.h2,.h3{ font-family:"Bebas Neue",sans-serif!important; font
 .dk-facts summary span.dk-pm{ color:var(--dk-ash); }
 .dk-facts[open] summary .dk-pm{ transform:rotate(45deg); display:inline-block; }
 .dk-fda{ margin-top:22px; font-size:11px; line-height:1.6; color:var(--dk-ash); }
+
+/* tonal rhythm + light sections */
+.dk-char{ background:#161616; }
+.dk-light{ background:#F2F1EC; color:#0D0D0D; }
+.dk-light .dk-bebas, .dk-light .dk-statement p{ color:#0D0D0D; }
+.dk-light .dk-label{ color:#6b6b66; }
+.dk-light .dk-spec{ border-color:#D8D7D2; }
+.dk-light .dk-spec dt{ color:#6b6b66; }
+.dk-light .dk-spec dd{ color:#0D0D0D; }
+.dk-light .dk-badge{ color:#0D0D0D; border-color:#cfcec9; }
+.dk-light .dk-facts{ border-color:#D8D7D2; }
+.dk-light .dk-facts summary{ color:#0D0D0D; }
+.dk-light .dk-facts__b{ color:#3a3a37; }
+.dk-light .dk-facts summary span.dk-pm{ color:#6b6b66; }
+.dk-light .dk-fda{ color:#6b6b66; }

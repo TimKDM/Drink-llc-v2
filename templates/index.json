@@ -89,7 +89,8 @@
       "settings": {
         "text": "This is not a supplement. It's a drink.",
         "label": "Premium hydration \u00b7 made simple",
-        "accent": "#FF9EBA"
+        "accent": "#FF9EBA",
+        "tone": "light"
       }
     }
   },
