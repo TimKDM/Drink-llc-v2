@@ -1,9 +1,9 @@
 <section class="dk-sec" style="--dk-acc:{{ section.settings.accent }}"><div class="dk-wrap dk-split {{ section.settings.media_side }}">
   <div class="dk-split__m dk-collage">
     <img src="{{ 'drink-collage-1.jpg' | asset_url }}" alt="{{ section.settings.title | escape }}" loading="lazy">
-    <img src="{{ 'drink-collage-2.jpg' | asset_url }}" alt="" loading="lazy">
+    {% assign p1 = all_products['peach-mango'] %}{% if p1.featured_image %}<img class="dk-collage__prod" src="{{ p1.featured_image | image_url: width: 800 }}" alt="{{ p1.title | escape }}" loading="lazy">{% else %}<img src="{{ 'drink-collage-2.jpg' | asset_url }}" alt="" loading="lazy">{% endif %}
     <img src="{{ 'drink-collage-3.jpg' | asset_url }}" alt="" loading="lazy">
-    <img src="{{ 'drink-collage-4.jpg' | asset_url }}" alt="" loading="lazy">
+    {% assign p2 = all_products['creatine'] %}{% if p2.featured_image %}<img class="dk-collage__prod" src="{{ p2.featured_image | image_url: width: 800 }}" alt="{{ p2.title | escape }}" loading="lazy">{% else %}<img src="{{ 'drink-collage-4.jpg' | asset_url }}" alt="" loading="lazy">{% endif %}
     <img src="{{ 'drink-collage-5.jpg' | asset_url }}" alt="" loading="lazy">
     <img src="{{ 'drink-collage-6.jpg' | asset_url }}" alt="" loading="lazy">
   </div>

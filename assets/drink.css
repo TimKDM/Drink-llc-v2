@@ -139,3 +139,4 @@ h1,h2,h3,h4,.h0,.h1,.h2,.h3{ font-family:"Bebas Neue",sans-serif!important; font
 .dk-collage img:nth-child(4){ grid-column:1; grid-row:3; }
 .dk-collage img:nth-child(5){ grid-column:2; grid-row:3; }
 .dk-collage img:nth-child(6){ grid-column:3; grid-row:3; }
+.dk-split__m img.dk-collage__prod{ filter:none; object-fit:contain; background:#F4F3F1; padding:8%; }
