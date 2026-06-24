@@ -92,6 +92,16 @@
         "accent": "#FF9EBA",
         "tone": "light"
       }
+    },
+    "banner2": {
+      "type": "drink-lifestyle-banner",
+      "settings": {
+        "asset_name": "drink-banner-2.jpg",
+        "kicker": "Sunup to sundown",
+        "title": "Hydrate on your time.",
+        "cta": "Shop the lineup",
+        "accent": "#FF8C42"
+      }
     }
   },
   "order": [
@@ -101,6 +111,7 @@
     "banner",
     "split",
     "gallery",
+    "banner2",
     "statement"
   ]
 }
