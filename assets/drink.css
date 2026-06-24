@@ -111,3 +111,5 @@ h1,h2,h3,h4,.h0,.h1,.h2,.h3{ font-family:"Bebas Neue",sans-serif!important; font
 
 /* lifestyle grade — unify the stock set on the dark theme */
 .dk-lstyle__img, .dk-split__m img, .dk-gal__i img{ filter:grayscale(.18) contrast(1.06) brightness(.96) saturate(.9); }
+
+.dk-lstyle--warm .dk-lstyle__img{ filter:saturate(1.06) contrast(1.04) brightness(.98); }

@@ -1,4 +1,4 @@
-<section class="dk-lstyle" style="--dk-acc:{{ section.settings.accent }}">
+<section class="dk-lstyle{% if section.settings.keep_color %} dk-lstyle--warm{% endif %}" style="--dk-acc:{{ section.settings.accent }}">
   {% if section.settings.image %}<img class="dk-lstyle__img" src="{{ section.settings.image | image_url: width: 2400 }}" alt="{{ section.settings.title | escape }}" loading="eager">{% else %}{% assign dasset = section.settings.asset_name | default: 'drink-banner.jpg' %}<img class="dk-lstyle__img" src="{{ dasset | asset_url }}" alt="{{ section.settings.title | escape }}" loading="eager">{% endif %}
   <div class="dk-lstyle__ov"></div>
   <div class="dk-wrap dk-lstyle__c">
@@ -11,6 +11,7 @@
 { "name":"DRiNK lifestyle banner","settings":[
   {"type":"image_picker","id":"image","label":"Image"},
   {"type":"text","id":"asset_name","label":"Bundled image filename","default":"drink-banner.jpg"},
+  {"type":"checkbox","id":"keep_color","label":"Keep full color (skip grade)","default":false},
   {"type":"text","id":"kicker","label":"Kicker","default":"Any pace"},
   {"type":"text","id":"title","label":"Title","default":"One drink. Every you."},
   {"type":"text","id":"cta","label":"CTA","default":"Pick your flavor."},

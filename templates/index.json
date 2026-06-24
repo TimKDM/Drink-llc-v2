@@ -31,7 +31,8 @@
         "kicker": "Any pace",
         "title": "One drink. Every you.",
         "cta": "Pick your flavor.",
-        "accent": "#FF8C42"
+        "accent": "#FF8C42",
+        "keep_color": true
       }
     },
     "split": {
@@ -97,10 +98,11 @@
       "type": "drink-lifestyle-banner",
       "settings": {
         "asset_name": "drink-banner-2.jpg",
-        "kicker": "Sunup to sundown",
+        "kicker": "After dark",
         "title": "Hydrate on your time.",
         "cta": "Shop the lineup",
-        "accent": "#FF8C42"
+        "accent": "#FF8C42",
+        "keep_color": false
       }
     }
   },
