@@ -29,7 +29,7 @@
     "gallery": {
       "type": "drink-lifestyle-gallery",
       "settings": {
-        "heading": "In the wild",
+        "heading": "After hours",
         "accent": "#7CB518"
       },
       "blocks": {
@@ -127,7 +127,7 @@
     "marquee",
     "grid",
     "split",
-    "gallery",
-    "statement"
+    "statement",
+    "gallery"
   ]
 }
