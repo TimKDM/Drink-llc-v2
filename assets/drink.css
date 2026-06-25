@@ -134,7 +134,7 @@ h1,h2,h3,h4,.h0,.h1,.h2,.h3{ font-family:"Bebas Neue",sans-serif!important; font
 .dk-feat__head{ margin-bottom:30px; }
 .dk-feat__meta{ display:flex; justify-content:space-between; align-items:center; gap:24px; flex-wrap:wrap; margin-top:14px; }
 .dk-feat__meta p{ max-width:48ch; margin:0; }
-.dk-split__m.dk-collage{ background:transparent; border-radius:0; overflow:visible; display:grid; gap:8px; }
+.dk-split__m.dk-collage{ background:transparent; border-radius:0; overflow:visible; display:grid; gap:8px; width:100%; aspect-ratio:auto; }
 .dk-collage img{ width:100%; height:100%; object-fit:cover; border-radius:8px; }
 .dk-collage--bento{ height:min(86vh,900px); grid-template-columns:repeat(4,1fr); grid-template-rows:repeat(3,1fr); gap:6px; }
 .dk-collage--bento img{ filter:none; border-radius:4px; }
