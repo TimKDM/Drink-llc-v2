@@ -1,11 +1,9 @@
-<section class="dk-sec dk-feat" style="--dk-acc:{{ section.settings.accent }}"><div class="dk-wrap">
-  <div class="dk-feat__head">
+<section class="dk-sec dk-feat" style="--dk-acc:{{ section.settings.accent }}"><div class="dk-wrap dk-split right">
+  <div class="dk-split__x">
     {% if section.settings.kicker != blank %}<span class="dk-label">{{ section.settings.kicker }}</span>{% endif %}
     <h2 class="dk-bebas">{{ section.settings.title }}</h2>
-    <div class="dk-feat__meta">
-      <p class="dk-muted">{{ section.settings.body }}</p>
-      {% if section.settings.cta != blank %}<a class="dk-btn dk-btn--ghost" href="{{ section.settings.link | default: '/collections/all' }}">{{ section.settings.cta }}</a>{% endif %}
-    </div>
+    <p class="dk-muted">{{ section.settings.body }}</p>
+    {% if section.settings.cta != blank %}<a class="dk-btn dk-btn--ghost" href="{{ section.settings.link | default: '/collections/all' }}">{{ section.settings.cta }}</a>{% endif %}
   </div>
   <div class="dk-split__m dk-collage dk-collage--bento">
     <img src="{{ 'drink-collage-1.jpg' | asset_url }}" alt="{{ section.settings.title | escape }}" loading="lazy">
