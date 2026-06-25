@@ -153,3 +153,7 @@ h1,h2,h3,h4,.h0,.h1,.h2,.h3{ font-family:"Bebas Neue",sans-serif!important; font
 @media(max-width:760px){ .dk-feat .dk-split{ grid-template-columns:1fr; } }
 
 .dk-feat{ padding-block:0; }
+
+/* kill link underlines */
+.dk-btn, .dk-btn:hover, .dk-card, .dk-card:hover, .dk-card *{ text-decoration:none; }
+.dk-feat a, .dk-hs a, .dk-lstyle a{ text-decoration:none; }
