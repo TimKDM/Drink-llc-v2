@@ -151,3 +151,5 @@ h1,h2,h3,h4,.h0,.h1,.h2,.h3{ font-family:"Bebas Neue",sans-serif!important; font
 
 .dk-feat .dk-split{ grid-template-columns:0.78fr 1.22fr; align-items:center; }
 @media(max-width:760px){ .dk-feat .dk-split{ grid-template-columns:1fr; } }
+
+.dk-feat{ padding-block:0; }
