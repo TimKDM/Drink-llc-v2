@@ -1,6 +1,6 @@
 {% comment %} DRiNK structured data: Organization + WebSite site-wide, FAQPage on /pages/faq {% endcomment %}
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Organization","name":"DRiNK.","legalName":"Drink LLC","url":"{{ shop.url }}","email":"support@thisisdrink.com","slogan":"No hype. Just hydration.","description":"Premium hydration and recovery drink mixes. Electrolytes and B-vitamins in clean flavors with no sugar, no caffeine, and no filler."}
+{"@context":"https://schema.org","@type":"Organization","name":"DRiNK.","legalName":"Drink LLC","url":"{{ shop.url }}","email":"support@thisisdrink.com","slogan":"No hype. Just hydration.","description":"Premium hydration and recovery drink mixes. Electrolytes and B-vitamins in clean flavors with no caffeine and no filler."}
 </script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"WebSite","name":"DRiNK.","url":"{{ shop.url }}"}
@@ -8,10 +8,10 @@
 {% if request.page_type == 'page' and page.handle == 'faq' %}
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
-{"@type":"Question","name":"What is DRiNK.?","acceptedAnswer":{"@type":"Answer","text":"DRiNK. is a line of premium hydration drink mixes. Each flavor delivers electrolytes and B-vitamins in a clean taste with no sugar, no caffeine, and no filler. Mix one scoop with water and drink."}},
+{"@type":"Question","name":"What is DRiNK.?","acceptedAnswer":{"@type":"Answer","text":"DRiNK. is a line of premium hydration drink mixes. Each flavor delivers electrolytes and B-vitamins in a clean taste with no caffeine and no filler. Mix one scoop with water and drink."}},
 {"@type":"Question","name":"What flavors are available?","acceptedAnswer":{"@type":"Answer","text":"Lemonade, Lychee, Peach Mango, and Passion Fruit at $29.99 each, plus a Creatine Hydration Drink in Lemon at $39.99."}},
 {"@type":"Question","name":"What is in the Creatine Hydration Drink?","acceptedAnswer":{"@type":"Answer","text":"5 grams of creatine monohydrate plus electrolytes (magnesium, sodium, and potassium) in a clean lemon flavor, with no filler."}},
-{"@type":"Question","name":"Does DRiNK. contain caffeine or sugar?","acceptedAnswer":{"@type":"Answer","text":"No. All DRiNK. products are caffeine-free and sugar-free, and are keto-friendly."}},
+{"@type":"Question","name":"Does DRiNK. contain caffeine?","acceptedAnswer":{"@type":"Answer","text":"No. All DRiNK. products are caffeine-free and keto-friendly."}},
 {"@type":"Question","name":"How do I use it?","acceptedAnswer":{"@type":"Answer","text":"Mix one scoop with water, stir, and drink. Use daily or around activity for hydration and recovery."}},
 {"@type":"Question","name":"Where does DRiNK. ship from and how long does it take?","acceptedAnswer":{"@type":"Answer","text":"Orders are fulfilled and shipped from the United States. They typically process in 2 to 5 business days, with delivery usually 3 to 7 business days after that."}},
 {"@type":"Question","name":"What is the return policy?","acceptedAnswer":{"@type":"Answer","text":"Because the products are consumable supplements, opened items cannot be returned for safety reasons. Unopened items in original condition may be eligible for return, and damaged, defective, or incorrect orders are replaced or refunded."}}
