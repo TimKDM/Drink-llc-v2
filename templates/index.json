@@ -18,21 +18,12 @@
     "split": {
       "type": "drink-feature-split",
       "settings": {
-        "kicker": "The whole point",
-        "title": "Hydration that keeps up.",
+        "kicker": "No hype. Just hydration.",
+        "title": "This is not a supplement. It's a drink.",
         "body": "Electrolytes and B-vitamins in a clean flavor. No sugar, no caffeine, no filler. You drink it. That's the whole ritual.",
         "cta": "Shop the lineup",
         "media_side": "right",
         "accent": "#C77DFF"
-      }
-    },
-    "statement": {
-      "type": "drink-statement",
-      "settings": {
-        "text": "This is not a supplement. It's a drink.",
-        "label": "Premium hydration \u00b7 made simple",
-        "accent": "#FF9EBA",
-        "tone": "light"
       }
     },
     "heroslider": {
@@ -87,7 +78,6 @@
     "heroslider",
     "marquee",
     "grid",
-    "split",
-    "statement"
+    "split"
   ]
 }
