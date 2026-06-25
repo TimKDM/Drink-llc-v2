@@ -5,12 +5,6 @@
     "footer": {
       "type": "footer",
       "blocks": {
-        "brand": {
-          "type": "brand_information",
-          "settings": {
-            "show_social": true
-          }
-        },
         "shop": {
           "type": "link_list",
           "settings": {
@@ -22,18 +16,25 @@
           "type": "link_list",
           "settings": {
             "heading": "Company",
-            "menu": "footer"
+            "menu": "footer-company"
+          }
+        },
+        "legal": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Help & Legal",
+            "menu": "footer-legal"
           }
         }
       },
       "block_order": [
-        "brand",
         "shop",
-        "company"
+        "company",
+        "legal"
       ],
       "settings": {
         "color_scheme": "scheme-1",
-        "newsletter_enable": true,
+        "newsletter_enable": false,
         "newsletter_heading": "Get the drop.",
         "enable_follow_on_shop": true,
         "show_social": true,
