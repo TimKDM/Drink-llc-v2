@@ -7,7 +7,7 @@
     <meta name="theme-color" content="">
     <meta name="google-site-verification" content="fWASKHtETmCHdANq5oe3JiR39Jryg4J0pIMQJLHw63s" />
     {% render 'drink-schema' %}
-    <link rel="icon" type="image/png" href="{{ 'drink-favicon.png' | asset_url }}">
+    {%- if settings.favicon == blank -%}<link rel="icon" type="image/png" href="{{ 'drink-favicon.png' | asset_url }}">{%- endif -%}
     <link rel="canonical" href="{{ canonical_url }}">
 
     {%- if settings.favicon != blank -%}
