@@ -1,3 +1,10 @@
+{%- comment -%} DRiNK: white background behind gallery media so transparent images (e.g. Supplement Facts) are readable on the dark theme {%- endcomment -%}
+<style>
+  media-gallery .product__media,
+  media-gallery .product__media img,
+  .product-media-modal .product__media,
+  .product-media-modal .product__media img { background-color: #ffffff; }
+</style>
 {% comment %}
   Renders a product media gallery. Should be used with 'media-gallery.js'
   Also see 'product-media-modal'
