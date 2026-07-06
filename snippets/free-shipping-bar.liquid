@@ -1,0 +1,28 @@
+{%- comment -%} Free shipping progress bar — threshold matches the "Free shipping over $50" automatic discount {%- endcomment -%}
+{%- liquid
+  assign fs_threshold = 5000
+  assign fs_remaining = fs_threshold | minus: cart.total_price
+  assign fs_pct = cart.total_price | times: 100 | divided_by: fs_threshold
+  if fs_pct > 100
+    assign fs_pct = 100
+  endif
+-%}
+{%- if cart != empty -%}
+  <div class="fs-bar">
+    {%- if cart.total_price >= fs_threshold -%}
+      <p class="fs-bar__msg">Free shipping unlocked. Nice.</p>
+    {%- else -%}
+      <p class="fs-bar__msg">You're <strong>{{ fs_remaining | money }}</strong> away from free shipping.</p>
+    {%- endif -%}
+    <div class="fs-bar__track">
+      <div class="fs-bar__fill" style="width: {{ fs_pct }}%;"></div>
+    </div>
+  </div>
+  <style>
+    .fs-bar { padding: 1rem 1.5rem 0.5rem; }
+    .fs-bar__msg { margin: 0 0 0.6rem; font-size: 1.3rem; line-height: 1.3; }
+    .fs-bar__msg strong { font-weight: 600; }
+    .fs-bar__track { height: 6px; border-radius: 999px; background: rgba(var(--color-foreground), 0.12); overflow: hidden; }
+    .fs-bar__fill { height: 100%; border-radius: 999px; background: #FF8C42; transition: width 0.4s ease; }
+  </style>
+{%- endif -%}
