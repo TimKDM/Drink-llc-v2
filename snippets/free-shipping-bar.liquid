@@ -1,6 +1,6 @@
 {%- comment -%} Free shipping progress bar — threshold matches the "Free shipping over $50" automatic discount {%- endcomment -%}
 {%- liquid
-  assign fs_threshold = 3000
+  assign fs_threshold = 2500
   assign fs_remaining = fs_threshold | minus: cart.total_price
   assign fs_pct = cart.total_price | times: 100 | divided_by: fs_threshold
   if fs_pct > 100
