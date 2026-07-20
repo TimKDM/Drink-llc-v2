@@ -1,0 +1,66 @@
+{%- comment -%} DRiNK: email capture popup. Native Shopify customer form, no app required. {%- endcomment -%}
+<div id="drink-pop" class="drink-pop" hidden>
+  <div class="drink-pop__backdrop" data-drink-pop-close></div>
+  <div class="drink-pop__box" role="dialog" aria-modal="true" aria-label="Get 15% off">
+    <button class="drink-pop__x" data-drink-pop-close aria-label="Close">&times;</button>
+
+    <div data-drink-pop-ask>
+      <h2 class="drink-pop__h">15% off. That's the whole pitch.</h2>
+      <p class="drink-pop__p">Electrolytes and B-vitamins. No caffeine, no filler.</p>
+      {%- form 'customer', id: 'DrinkPopForm' -%}
+        <input type="hidden" name="contact[tags]" value="newsletter,popup">
+        <input class="drink-pop__input" type="email" name="contact[email]" placeholder="you@email.com" required autocomplete="email">
+        <button class="drink-pop__btn" type="submit">Get my code</button>
+      {%- endform -%}
+      <button class="drink-pop__no" data-drink-pop-close>No thanks, I'm hydrated</button>
+    </div>
+
+    <div data-drink-pop-done hidden>
+      <h2 class="drink-pop__h">You're in.</h2>
+      <p class="drink-pop__p">Here's your code. No hype.</p>
+      <p class="drink-pop__code">THISISDRINK</p>
+      <p class="drink-pop__fine">15% off your first order. Free shipping over $30.</p>
+      <a class="drink-pop__btn" href="/collections/all">Pick your flavor</a>
+    </div>
+  </div>
+</div>
+<style>
+  .drink-pop { position: fixed; inset: 0; z-index: 9999; display: flex; align-items: center; justify-content: center; }
+  .drink-pop[hidden] { display: none; }
+  .drink-pop__backdrop { position: absolute; inset: 0; background: rgba(0,0,0,0.7); }
+  .drink-pop__box { position: relative; z-index: 1; width: min(92vw, 44rem); background: rgb(var(--color-background)); color: rgb(var(--color-foreground)); padding: 3.2rem 2.8rem; text-align: center; border: 1px solid rgba(var(--color-foreground), 0.15); }
+  .drink-pop__x { position: absolute; top: 0.6rem; right: 1rem; background: none; border: 0; font-size: 2.6rem; line-height: 1; color: inherit; cursor: pointer; opacity: 0.6; }
+  .drink-pop__h { margin: 0 0 0.8rem; font-size: 2.4rem; line-height: 1.15; }
+  .drink-pop__p { margin: 0 0 1.8rem; font-size: 1.4rem; opacity: 0.85; }
+  .drink-pop__input { width: 100%; padding: 1.2rem; margin-bottom: 1rem; font-size: 1.5rem; background: transparent; color: inherit; border: 1px solid rgba(var(--color-foreground), 0.3); }
+  .drink-pop__btn { display: block; width: 100%; padding: 1.3rem; background: #FF8C42; color: #111; border: 0; font-size: 1.4rem; letter-spacing: 0.08em; text-transform: uppercase; cursor: pointer; text-decoration: none; }
+  .drink-pop__no { display: block; width: 100%; margin-top: 1.2rem; background: none; border: 0; color: inherit; opacity: 0.55; font-size: 1.25rem; cursor: pointer; text-decoration: underline; }
+  .drink-pop__code { margin: 0 0 0.8rem; font-size: 2.6rem; letter-spacing: 0.14em; color: #FF8C42; }
+  .drink-pop__fine { margin: 0 0 1.8rem; font-size: 1.25rem; opacity: 0.7; }
+</style>
+<script>
+  (function () {
+    var el = document.getElementById('drink-pop');
+    if (!el) return;
+    var KEY = 'drinkPopSeen';
+    var ask = el.querySelector('[data-drink-pop-ask]');
+    var done = el.querySelector('[data-drink-pop-done]');
+    function open() { el.hidden = false; document.body.style.overflow = 'hidden'; }
+    function close() { el.hidden = true; document.body.style.overflow = ''; try { localStorage.setItem(KEY, '1'); } catch (e) {} }
+    el.querySelectorAll('[data-drink-pop-close]').forEach(function (b) { b.addEventListener('click', close); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !el.hidden) close(); });
+
+    if (/customer_posted=true/.test(window.location.search)) {
+      ask.hidden = true; done.hidden = false; open();
+      try { localStorage.setItem(KEY, '1'); } catch (e) {}
+      return;
+    }
+    var seen = false;
+    try { seen = localStorage.getItem(KEY) === '1'; } catch (e) {}
+    if (seen) return;
+    var fired = false;
+    function fire() { if (fired) return; fired = true; open(); }
+    setTimeout(fire, 12000);
+    document.addEventListener('mouseout', function (e) { if (!e.relatedTarget && e.clientY <= 0) fire(); });
+  })();
+</script>

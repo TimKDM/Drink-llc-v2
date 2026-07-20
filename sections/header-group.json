@@ -8,7 +8,7 @@
         "color_scheme": "scheme-1",
         "show_line_separator": true,
         "show_social": false,
-        "auto_rotate": false,
+        "auto_rotate": true,
         "change_slides_speed": 5,
         "enable_country_selector": false,
         "enable_language_selector": false
@@ -22,10 +22,30 @@
             "color_scheme": "scheme-1",
             "link": ""
           }
+        },
+        "announcement-bar-1": {
+          "type": "announcement",
+          "settings": {
+            "text": "Any 2 flavors — save $10  ·  Free shipping over $30",
+            "text_alignment": "center",
+            "color_scheme": "scheme-1",
+            "link": "/collections/all"
+          }
+        },
+        "announcement-bar-2": {
+          "type": "announcement",
+          "settings": {
+            "text": "Electrolytes + B-vitamins. No caffeine. No filler.",
+            "text_alignment": "center",
+            "color_scheme": "scheme-1",
+            "link": ""
+          }
         }
       },
       "block_order": [
-        "announcement-bar-0"
+        "announcement-bar-0",
+        "announcement-bar-1",
+        "announcement-bar-2"
       ]
     },
     "header": {
