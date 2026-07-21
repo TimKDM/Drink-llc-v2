@@ -157,3 +157,26 @@ h1,h2,h3,h4,.h0,.h1,.h2,.h3{ font-family:"Bebas Neue",sans-serif!important; font
 /* kill link underlines */
 .dk-btn, .dk-btn:hover, .dk-card, .dk-card:hover, .dk-card *{ text-decoration:none; }
 .dk-feat a, .dk-hs a, .dk-lstyle a{ text-decoration:none; }
+
+/* ── DRiNK: readability fixes ───────────────────────────────── */
+/* Small caps labels were 10px on ash grey — too small to read comfortably */
+.dk-label{ font-size:12px; letter-spacing:.22em; color:#b9b8b2; }
+.dk-light .dk-label{ color:#55554f; }
+
+/* FDA disclaimer / fine print */
+.dk-fine, .dk-disclaimer, small{ font-size:12px; line-height:1.6; }
+
+/* Judge.me widget ships light-theme defaults — near-invisible on our black */
+.jm-text,
+.jm-review-widget-minimal-header__title,
+.jm-no-reviews-state__text,
+.jm-review-widget *,
+.jdgm-widget, .jdgm-widget *{
+  color:#f3f2ee !important;
+}
+.jm-review-widget-minimal-header__title{ font-size:20px; font-weight:600; }
+.jm-no-reviews-state__text{ font-size:15px; color:#b9b8b2 !important; }
+/* keep form fields legible (dark text on white inputs) */
+.jm-input, .jm-textarea, .jdgm-form input, .jdgm-form textarea{
+  background:#fff !important; color:#111 !important;
+}
