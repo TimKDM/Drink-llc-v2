@@ -61,9 +61,9 @@
             "widget_style": "card",
             "widget_style_card_selector": "radio_button",
             "subscription_policy_url": "",
-            "color_text_body": "#6D7175",
-            "dividers_color": "#8F8D8D",
-            "background_color": "#FFFFFF",
+            "color_text_body": "#6d7175",
+            "dividers_color": "#8f8d8d",
+            "background_color": "#ffffff",
             "border_thickness": 1,
             "border_radius": 0,
             "product": "{{product}}"
@@ -129,12 +129,33 @@
     "drink_facts": {
       "type": "drink-product-facts",
       "settings": {}
+    },
+    "17846435743389a445": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_review_widget_8kDNEn": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "review_data": "real_data",
+            "max_width": 1200,
+            "show_shop_reviews": false,
+            "empty_state": "empty_widget"
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_review_widget_8kDNEn"
+      ],
+      "settings": {
+        "include_margins": true
+      }
     }
   },
   "order": [
     "main",
     "disclosures",
     "related-products",
-    "drink_facts"
+    "drink_facts",
+    "17846435743389a445"
   ]
 }
