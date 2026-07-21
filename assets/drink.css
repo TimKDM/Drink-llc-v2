@@ -339,3 +339,62 @@ body.dk-commerce .shopify_subscriptions_app_block_label_children label{
   font-size:13px !important; text-transform:none !important; letter-spacing:0 !important;
   color:#3a3a37 !important; font-weight:400 !important; padding:0 !important;
 }
+
+/* ══ Subscribe & Save — SEGMENTED CONTROL (overrides cards) ══ */
+body.dk-commerce .shopify_subscriptions_app_block_purchase_options{
+  display:flex !important; flex-direction:row !important; position:relative;
+  gap:0 !important; border:1px solid #0D0D0D !important; border-radius:4px;
+  overflow:visible !important; margin:0 0 18px !important; background:transparent !important;
+}
+body.dk-commerce .shopify_subscriptions_app_block_purchase_options:has(.shopify_subscriptions_app_block_label:nth-of-type(2) input:checked){
+  margin-bottom:46px !important;
+}
+body.dk-commerce .shopify_subscriptions_app_block_label{
+  flex:1 1 50%; border:none !important; border-radius:0 !important;
+  background:transparent !important; box-shadow:none !important; padding:0 !important;
+}
+body.dk-commerce .shopify_subscriptions_app_block_label:first-of-type{
+  border-right:1px solid #0D0D0D !important;
+}
+body.dk-commerce .shopify_subscriptions_app_block_label:hover{ border-color:#0D0D0D !important; }
+body.dk-commerce .shopify_subscriptions_app_block_label > label{
+  display:flex !important; align-items:center; justify-content:center; gap:0 !important;
+  padding:14px 10px !important; margin:0 !important; cursor:pointer; text-align:center;
+  font-family:"DM Sans",sans-serif !important; font-weight:500 !important;
+  font-size:11px !important; text-transform:uppercase; letter-spacing:.14em;
+  color:#0D0D0D !important; background:transparent !important;
+  transition:background .15s ease, color .15s ease;
+}
+/* hide native radios, keep them focusable */
+body.dk-commerce .shopify_subscriptions_app_block_label input[type=radio]{
+  position:absolute !important; opacity:0 !important; width:1px !important; height:1px !important;
+  margin:0 !important; pointer-events:none;
+}
+/* active segment fills black */
+body.dk-commerce .shopify_subscriptions_app_block_label:has(input:checked) > label{
+  background:#0D0D0D !important; color:#F5F5F0 !important;
+}
+/* append savings to the subscribe segment, kill the old badge */
+body.dk-commerce .shopify_subscriptions_app_block_label:nth-of-type(2) > label::after{
+  content:" · Save 15%"; background:none !important; color:inherit !important;
+  margin:0 !important; padding:0 !important; border-radius:0 !important;
+  font-size:11px; font-weight:500; letter-spacing:.14em;
+}
+/* frequency line: plain text under the control, only when subscribed */
+body.dk-commerce .shopify_subscriptions_app_block_label_children{
+  position:absolute; top:calc(100% + 12px); left:0; width:100%;
+  padding:0 !important; margin:0 !important;
+}
+body.dk-commerce .shopify_subscriptions_app_block_label:not(:has(input:checked)) .shopify_subscriptions_app_block_label_children{
+  display:none !important;
+}
+body.dk-commerce .shopify_subscriptions_app_block_label_children ul{ list-style:none; margin:0; padding:0; }
+body.dk-commerce .shopify_subscriptions_app_block_label_children li{ margin:0; }
+body.dk-commerce .shopify_subscriptions_app_block_label_children input[type=radio]{
+  position:absolute !important; opacity:0 !important; width:1px !important; height:1px !important;
+}
+body.dk-commerce .shopify_subscriptions_app_block_label_children label{
+  font-family:"DM Sans",sans-serif !important; font-size:13px !important;
+  text-transform:none !important; letter-spacing:0 !important; font-weight:400 !important;
+  color:#5c5c56 !important; padding:0 !important; display:block !important;
+}
