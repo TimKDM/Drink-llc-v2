@@ -76,10 +76,10 @@
         "price",
         "variant_picker",
         "quantity_selector",
+        "subscriptions_app_block_rT8Dcd",
         "buy_buttons",
         "description",
-        "share",
-        "subscriptions_app_block_rT8Dcd"
+        "share"
       ],
       "settings": {
         "enable_sticky_info": true,

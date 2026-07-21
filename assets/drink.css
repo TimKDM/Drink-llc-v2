@@ -180,3 +180,32 @@ h1,h2,h3,h4,.h0,.h1,.h2,.h3{ font-family:"Bebas Neue",sans-serif!important; font
 .jm-input, .jm-textarea, .jdgm-form input, .jdgm-form textarea{
   background:#fff !important; color:#111 !important;
 }
+
+/* ── Subscribe & Save: contain + dark theme ─────────────────── */
+.shopify_subscriptions_app_block_container,
+.shopify_subscriptions_app_block,
+.shopify_subscriptions_app_block_purchase_options{
+  max-width:100% !important; width:100% !important;
+  background:transparent !important;
+}
+.shopify_subscriptions_app_block_purchase_options{
+  border:1px solid rgba(245,245,240,.18) !important;
+  border-radius:4px; overflow:hidden; margin:0 0 1.6rem;
+}
+.shopify_subscriptions_app_block_purchase_options *{
+  background:transparent !important;
+  color:#F5F5F0 !important;
+  border-color:rgba(245,245,240,.14) !important;
+}
+.shopify_subscriptions_app_block_purchase_options label{
+  padding:14px 16px !important; font-size:15px !important; cursor:pointer;
+}
+.shopify_subscriptions_app_block_purchase_options input[type=radio]{
+  accent-color:#FF8C42; width:16px; height:16px; margin-right:10px;
+}
+/* Judge.me widget — force legible on black */
+#judgeme_product_reviews, .jdgm-widget, .jm-review-widget,
+#judgeme_product_reviews *, .jdgm-widget *, .jm-review-widget *{
+  color:#F5F5F0 !important;
+}
+.jm-no-reviews-state__text, .jdgm-rev__timestamp{ color:#b9b8b2 !important; }
