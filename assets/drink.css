@@ -268,3 +268,26 @@ body.dk-commerce .jm-no-reviews-state__text{ color:#5c5c56 !important; }
 /* gallery no longer needs a forced white plate */
 body.dk-commerce media-gallery .product__media,
 body.dk-commerce media-gallery .product__media img{ background:transparent !important; }
+
+/* fix: announcement/utility bar must stay black on light pages */
+body.dk-commerce .utility-bar,
+body.dk-commerce .announcement-bar,
+body.dk-commerce .announcement-bar-slider,
+body.dk-commerce .utility-bar__grid,
+body.dk-commerce .announcement-bar__announcement{
+  --color-background:13,13,13; --color-foreground:245,245,240;
+  background:#0D0D0D !important; color:#F5F5F0 !important;
+}
+body.dk-commerce .announcement-bar__message,
+body.dk-commerce .announcement-bar__link,
+body.dk-commerce .utility-bar *,
+body.dk-commerce .announcement-bar *{ color:#F5F5F0 !important; }
+body.dk-commerce .slider-button .icon,
+body.dk-commerce .utility-bar .icon{ color:#F5F5F0 !important; }
+
+/* fix: inline links legible on light (e.g. "Shipping calculated at checkout") */
+body.dk-commerce main a:not(.button):not(.shopify-payment-button__button),
+body.dk-commerce .product__info-wrapper a:not(.button){
+  color:#0D0D0D !important; text-decoration:underline;
+}
+body.dk-commerce .product__tax a, body.dk-commerce .product__tax{ color:#5c5c56 !important; }
