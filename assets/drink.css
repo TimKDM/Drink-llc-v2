@@ -209,3 +209,62 @@ h1,h2,h3,h4,.h0,.h1,.h2,.h3{ font-family:"Bebas Neue",sans-serif!important; font
   color:#F5F5F0 !important;
 }
 .jm-no-reviews-state__text, .jdgm-rev__timestamp{ color:#b9b8b2 !important; }
+
+/* ══ LIGHT COMMERCE SURFACES ═══════════════════════════════════
+   Product / collection / cart go bone-white so product photos,
+   Supplement Facts and third-party apps read correctly.
+   Header, footer and brand pages stay black.            ══════ */
+body.dk-commerce{
+  --color-background:242,241,236; --color-foreground:13,13,13;
+  background:#F2F1EC !important; color:#0D0D0D !important;
+}
+body.dk-commerce main,
+body.dk-commerce .shopify-section:not(.header-wrapper):not(.footer-wrapper),
+body.dk-commerce .color-scheme-1,
+body.dk-commerce .color-background-1{
+  --color-background:242,241,236; --color-foreground:13,13,13;
+  background:#F2F1EC !important; color:#0D0D0D !important;
+}
+body.dk-commerce h1, body.dk-commerce h2, body.dk-commerce h3,
+body.dk-commerce .h0, body.dk-commerce .h1, body.dk-commerce .h2,
+body.dk-commerce .product__title, body.dk-commerce .price,
+body.dk-commerce p, body.dk-commerce li, body.dk-commerce dd{ color:#0D0D0D !important; }
+body.dk-commerce .dk-label, body.dk-commerce dt, body.dk-commerce small{ color:#5c5c56 !important; }
+
+/* header + footer stay black on commerce pages */
+body.dk-commerce .header-wrapper, body.dk-commerce .header,
+body.dk-commerce .footer, body.dk-commerce .footer-wrapper,
+body.dk-commerce .announcement-bar{
+  --color-background:13,13,13; --color-foreground:245,245,240;
+  background:#0D0D0D !important; color:#F5F5F0 !important;
+}
+body.dk-commerce .header a, body.dk-commerce .footer a,
+body.dk-commerce .header .h2, body.dk-commerce .footer h2,
+body.dk-commerce .announcement-bar *{ color:#F5F5F0 !important; }
+
+/* buttons: solid black primary action on light */
+body.dk-commerce .product-form__submit,
+body.dk-commerce .cart__checkout-button{
+  background:#0D0D0D !important; color:#F5F5F0 !important; border:none !important;
+}
+body.dk-commerce .button--primary{ background:var(--dk-acc)!important; color:#0D0D0D!important; }
+
+/* trust block + badges */
+body.dk-commerce .drink-trust__badges span,
+body.dk-commerce .drink-trust__benefits li{ color:#3a3a37 !important; }
+body.dk-commerce .drink-trust__benefits li{ border-color:#cfcec9 !important; }
+
+/* apps: flip back to dark text on light */
+body.dk-commerce .shopify_subscriptions_app_block_purchase_options{
+  border-color:rgba(13,13,13,.18) !important;
+}
+body.dk-commerce .shopify_subscriptions_app_block_purchase_options *{
+  color:#0D0D0D !important; border-color:rgba(13,13,13,.14) !important;
+}
+body.dk-commerce #judgeme_product_reviews *, body.dk-commerce .jdgm-widget *,
+body.dk-commerce .jm-review-widget *{ color:#0D0D0D !important; }
+body.dk-commerce .jm-no-reviews-state__text{ color:#5c5c56 !important; }
+
+/* gallery no longer needs a forced white plate */
+body.dk-commerce media-gallery .product__media,
+body.dk-commerce media-gallery .product__media img{ background:transparent !important; }
