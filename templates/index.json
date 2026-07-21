@@ -34,8 +34,8 @@
           "settings": {
             "asset_name": "drink-hero-1.jpg",
             "keep_color": true,
-            "kicker": "Any pace",
-            "title": "One drink. Every you.",
+            "kicker": "Electrolytes & B-vitamins",
+            "title": "No hype. Just hydration.",
             "cta": "Pick your flavor.",
             "link": "/collections/all"
           }
@@ -56,8 +56,8 @@
           "settings": {
             "asset_name": "drink-hero-3.jpg",
             "keep_color": false,
-            "kicker": "No hype",
-            "title": "Just hydration.",
+            "kicker": "No filler",
+            "title": "Built for your body, not your feed.",
             "cta": "Shop the lineup",
             "link": "/collections/all"
           }
